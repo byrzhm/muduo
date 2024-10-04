@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.20)
 
 project(muduo C CXX)
 
@@ -50,7 +50,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 
-find_package(Boost REQUIRED)
+find_package(Boost CONFIG REQUIRED)
 find_package(Protobuf)
 find_package(CURL)
 find_package(ZLIB)
